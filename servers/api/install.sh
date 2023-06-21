@@ -3,8 +3,8 @@
 set -e
 
 APP_NAME="sp-api"
-LOAD_HASH=""
-CODE_URL="s3://sp-code/sp-api/$LOAD_HASH.tar.gz"
+LOAD_HASH="522132169ddb9be37dacc9cf8e9dc085f2181c0c"
+CODE_URL="s3://sp-code/sp-api-server/$LOAD_HASH.tar.gz"
 NODE_COMMAND="node src/server.js"
 HOSTNAME=$APP_NAME
 NODE_PORT=3000

@@ -1,0 +1,14 @@
+{
+  "name": "default-prod-iam",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "up": "PULUMI_CONFIG_PASSPHRASE='' pulumi up --stack iam --yes",
+    "down": "PULUMI_CONFIG_PASSPHRASE='' pulumi down --stack iam"
+  },
+  "dependencies": {
+    "@pulumi/aws": "^5.29.1",
+    "@pulumi/awsx": "^1.0.2",
+    "@pulumi/pulumi": "^3.55.0"
+  }
+}
