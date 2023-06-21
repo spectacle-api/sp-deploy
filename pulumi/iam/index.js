@@ -92,12 +92,12 @@ const code_read = new aws.iam.Policy('s3-code-read', {
 const role = new aws.iam.Role('sp-api-prod', {
   name: 'sp-api-prod',
   description: 'sp-api-prod',
-  path: "/",
-  assumeRolePolicy: '{"Version":"2012-10-17","Statement":[{"Effect":"Allow","Principal":{"Service":"ec2.amazonaws.com"},"Action":"sts:AssumeRole"}]}',
+  path: '/',
+  assumeRolePolicy:
+    '{"Version":"2012-10-17","Statement":[{"Effect":"Allow","Principal":{"Service":"ec2.amazonaws.com"},"Action":"sts:AssumeRole"}]}',
   managedPolicyArns: [code_read.arn, server_control.arn, email.arn],
 });
-new aws.iam.InstanceProfile("sp-api-prod", {
+new aws.iam.InstanceProfile('sp-api-prod', {
   name: 'sp-api-prod',
-  role: role.name
+  role: role.name,
 });
-
