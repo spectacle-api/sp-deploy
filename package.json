@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "pretty": "prettier --write \"pulumi/*/*.js\""
+  }
+}
