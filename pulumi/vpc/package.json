@@ -1,0 +1,14 @@
+{
+  "name": "default-prod-vpc",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "up": "PULUMI_CONFIG_PASSPHRASE='' pulumi up --stack vpc --yes",
+    "down": "PULUMI_CONFIG_PASSPHRASE='' pulumi down --stack vpc"
+  },
+  "dependencies": {
+    "@pulumi/aws": "^5.29.1",
+    "@pulumi/awsx": "^1.0.2",
+    "@pulumi/pulumi": "^3.55.0"
+  }
+}

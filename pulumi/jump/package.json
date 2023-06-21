@@ -1,0 +1,14 @@
+{
+  "name": "default-prod-ec2",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "up": "PULUMI_CONFIG_PASSPHRASE='' pulumi up --stack jump --yes",
+    "down": "PULUMI_CONFIG_PASSPHRASE='' pulumi down --stack jump"
+  },
+  "dependencies": {
+    "@pulumi/aws": "^5.29.1",
+    "@pulumi/awsx": "^1.0.2",
+    "@pulumi/pulumi": "^3.55.0"
+  }
+}
