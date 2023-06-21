@@ -71,6 +71,9 @@ const server = new aws.ec2.Instance('jump', {
   tags: {
     Name: 'jump',
   },
+  rootBlockDevice: {
+    volumeType: 'gp3',
+  },
   keyName: 'jlake',
 });
 
